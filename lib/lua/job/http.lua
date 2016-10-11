@@ -35,7 +35,7 @@ return function(uri,data)
 				ngx.header["Set-Cookie"] = cookie
 			end
 		end
-		if type(resp.body) == 'string' then
+		if type(resp.body) == 'string' and resp.body ~= "" then
 			return kk.json.decode(resp.body), resp.status
 		else
 			return nil, resp.status
