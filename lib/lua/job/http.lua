@@ -6,8 +6,6 @@ local table = require("table")
 
 return function(uri,data) 
 	
-	ngx.log(ngx.ALERT,"===="..ngx.var.remote_addr.."====\n")
-
 	local body = "{}"
 
 	if type(data) == "table" and table.getn(data) > 0 then
@@ -17,9 +15,6 @@ return function(uri,data)
 	local cookie = nil
 
 	local headers = ngx.req.get_headers()
-
-	ngx.log(ngx.ALERT,"===="..kk.json.encode(headers).."====\n")
-	ngx.log(ngx.ALERT,"===="..headers["Cookie"].."====\n")
 
 	if headers ~= nil then
 		cookie = headers["Cookie"]
