@@ -2,3 +2,4 @@
 #kk-job
 COPY ./kk-job-web/lib/lua/job /lib/lua/job
 COPY ./kk-job-web/@app/job /@app/job
+COPY ./kk-job-web/static/job /static/job

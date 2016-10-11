@@ -1,5 +1,7 @@
 #/bin/sh
 
+./compressor.sh
+
 echo "docker build -t kk/kk-job-web:latest ."
 
 docker build -t kk/kk-job-web:latest .
