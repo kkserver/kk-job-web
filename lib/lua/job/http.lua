@@ -26,6 +26,8 @@ return function(uri,data)
 		headers["Cookie"] = cookie
 	end
 
+	ngx.log(ngx.ALERT,'[HTTP] '..conf.baseURL .. uri)
+
 	local resp = kk.http.post(conf.baseURL .. uri, { headers = headers , body = body })
 
 	if resp then
