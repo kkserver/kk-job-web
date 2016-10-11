@@ -1,4 +1,6 @@
 
 function()
-	return { title = "job" }
+	local job = require("job/job")
+	local data,_ = job.http("job/get",ngx.req.get_uri_args())
+	return data
 end
