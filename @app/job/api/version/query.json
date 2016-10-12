@@ -2,5 +2,8 @@
 function()
 	local job = require("job/job")
 	local data,_ = job.http("job/version/query",ngx.req.get_uri_args())
+	if data and data.versions then
+		data.versions = require("job/version/item")(data.versions)
+	end
 	return data
 end

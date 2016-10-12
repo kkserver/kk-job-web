@@ -8,3 +8,5 @@ COPY ./lib/lua/conf /lib/lua/conf
 
 COPY ./static/job /static/job
 
+VOLUME /@app/job
+VOLUME /static/job

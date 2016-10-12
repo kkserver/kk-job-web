@@ -13,7 +13,9 @@ fi
 
 echo "docker run -p 88:80 --rm kk/kk-job-web:latest"
 
-docker run -p 88:80 --rm kk/kk-job-web:latest
+PWD=`pwd`
+
+docker run -p 88:80 --rm -v $PWD/@app/job:/@app/job:rw -v $PWD/static/job:/static/job:rw kk/kk-job-web:latest
 
 if [ $? -ne 0 ]; then
 	echo -e "docker run -p 88:80 --rm kk/kk-job-web:latest"

@@ -1,5 +1,6 @@
 
 local job = require("job/job")
+local table = require("table")
 
 return function(page)
 
@@ -9,10 +10,12 @@ return function(page)
 		
 		page.job = data.job
 
-		data,_ = job.http("job/version/query",{ jobId = data.job.id , maxVersion = "100"})
+		data,_ = job.http("job/version/query",{ jobId = data.job.id , maxVersion = "-1", limit="100" })
 
 		if data and data.versions then
-			page.versions = data.versions
+
+			page.versions = require("job/version/item")(data.versions)
+
 		end
 	else
 		page.job = {}
