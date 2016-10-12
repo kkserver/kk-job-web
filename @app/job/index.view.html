@@ -1,0 +1,41 @@
+{#function() 
+	return require("job/page/home")(page)
+end#}
+<html>
+	<head>
+		<title></title>
+		
+		<!-- #include(css.ht) -->
+	</head>
+	<body class="ui-body ui-job">
+		<table class="ui-table">
+			<tbody>
+				<tr>
+					<td class="ui-left">
+						<div class="ui-navbar">
+							<div class="ui-leftbar">
+								<span>{#page.job.title#}</span>
+							</div>
+							<div class="ui-rightbar">
+								<a class="ui-button" href="#">构建</a>
+							</div>
+						</div>
+						<div class="ui-list">
+							<div kk-each="versions" class="kk-view">#{{version}} {{title}}</div>
+						</div>
+					</td>
+					<td>
+						<div class="ui-navbar">
+							
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<script type="text/javascript">
+			page = {#kk.json.encode(page)#};
+			view = kk.view(document.body);
+			view.set("versions",page.versions || []);
+		</script>
+	</body>
+</html>

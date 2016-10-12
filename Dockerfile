@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/kk/kk-nginx:latest
+FROM registry.cn-hangzhou.aliyuncs.com/kk/kk-web:debug
 
 COPY ./@app/job /@app/job
 

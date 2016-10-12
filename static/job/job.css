@@ -1,0 +1,20 @@
+
+.ui-job {
+
+}
+
+.ui-job > .ui-table {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.ui-job > .ui-table td {
+	vertical-align: top;
+}
+
+.ui-job > .ui-table td.ui-left {
+	border-right: solid 1px #e5e5e5;
+	width: 320px;
+}
+

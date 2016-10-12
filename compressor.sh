@@ -67,13 +67,15 @@ fi
 
 if [ -d "./@app" ]; then
 
-	for map in `find ./@app -name "*.html.view"`; do
+	for map in `find ./@app -name "*.view.html"`; do
 
 		echo "compressor $map ..."
 
-		go run $HOME/compressor.go -home "$HOME/@app" -o "${map%.view}" -i "$map"
+		rm -f "${map%.view.html}.html"
 		
-		echo "compressor $map to ${map%.view}"
+		go run $HOME/compressor.go -home "$HOME/@app" -o "${map%.view.html}.html" -i "$map"
+		
+		echo "compressor $map to ${map%.view.html}.html"
 		
 	done
 

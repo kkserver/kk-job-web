@@ -1,5 +1,5 @@
 
 return {
 	version = "0.0.1",
-	baseURL = "http://kkmofang.cn:88/kk/kk.job."
+	baseURL = "http://101.201.235.57:88/kk/kk.job."
 }
