@@ -19,20 +19,15 @@ Page.status = function(value) {
 	}
 };
 
-
 $(function(){
 
 	view.set("versions",page.versions || []);
 
-	$(document.body).on("click",".ui-list-item",function(e){
-		window.location.hash = $("input[type=hidden][name=hash]",this).val();
-	});
-
-	var hashchange = function(){
+	kk.page().onchange(/.*/i,function(){
 
 		$("input.kk-job-version").each(function(){
 
-			if("#" + this.value == window.location.hash) {
+			if("#/" + this.value == window.location.hash) {
 				$(this.parentNode).addClass("ui-selected");
 			}
 			else {
@@ -41,10 +36,11 @@ $(function(){
 
 		});
 
-	};
+	});
 
-	$(window).on("hashchange",hashchange);
+	$(document.body).on("click",".ui-list-item",function(e){
+		window.location.hash = "#/" +$("input[type=hidden][name=hash]",this).val();
+	});
 
-	hashchange();
 
 });

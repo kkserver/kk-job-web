@@ -39,14 +39,18 @@ end#}
 	<script type="text/javascript" src="/static/ui/ui.url.js"></script>
 
 	<script type="text/javascript" src="/static/kk/kk.js"></script>
+	<script type="text/javascript" src="/static/kk/kk.page.js"></script>
 
 
-		<script type="text/javascript" src="/static/job/page/home.js"></script>
+		<script type="text/javascript" src="/static/job/home/index.js"></script>
+		<script type="text/javascript" src="/static/job/home/add.js"></script>
+		<script type="text/javascript" src="/static/job/home/version.js"></script>
 
 	</head>
 	<body class="ui-body ui-job">
 		<div class="ui-job-right">
 			<div class="ui-navbar"></div>
+			<div id="kk-page"></div>
 		</div>
 		<div class="ui-job-left">
 			<div class="ui-list">
@@ -64,7 +68,7 @@ end#}
 					<span>{#page.job.title#}</span>
 				</div>
 				<div class="ui-rightbar">
-					<a class="ui-button" href="#">新建</a>
+					<a class="ui-button" href="#/add">新建</a>
 				</div>
 			</div>
 		</div>

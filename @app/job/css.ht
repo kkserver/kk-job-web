@@ -32,3 +32,4 @@
 	<script type="text/javascript" src="/static/ui/ui.url.js"></script>
 
 	<script type="text/javascript" src="/static/kk/kk.js"></script>
+	<script type="text/javascript" src="/static/kk/kk.page.js"></script>
