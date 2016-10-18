@@ -1,3 +1,28 @@
 
-#ADD
-
+<div class="kk-job-version-add">
+	<form onsubmit="return false;">
+		<table class="ui-table">
+			<tbody>
+				<tr >
+					<th>说明</th>
+					<td>
+						<input type="text" name="title" value="master" class="ui-input" />
+					</td>
+				</tr>
+				<tr class="kk-view" kk-each="options">
+					<th kk-key="title"></th>
+					<td>
+						<input type="text" kk-attr-name="key" kk-key="value" class="ui-input" />
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">
+						<input type="submit" class="ui-button" value="提交" />
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</form>
+</div>

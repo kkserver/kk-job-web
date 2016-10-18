@@ -19,6 +19,9 @@
 	<link rel="stylesheet" type="text/css" href="/static/ui/ui.popover.css" />
 	<link rel="stylesheet" type="text/css" href="/static/ui/ui.table.css" />
 	<link rel="stylesheet" type="text/css" href="/static/ui/ui.progress.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.input.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.button.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.a.css" />
 
 	<link rel="stylesheet" type="text/css" href="/static/job/job.css">
 

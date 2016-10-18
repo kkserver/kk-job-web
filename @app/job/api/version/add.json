@@ -1,0 +1,7 @@
+
+function()
+	local job = require("job/job")
+	ngx.req.read_body()
+	local data,_ = job.http("job/version/create",ngx.req.get_post_args())
+	return data
+end
