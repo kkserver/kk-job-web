@@ -1,7 +1,7 @@
 
 kk.page().onview("/add",{
 
-	url : "add.html",
+	url : "add.htm",
 	container: "#kk-page",
 	onload : function(view,options) {
 

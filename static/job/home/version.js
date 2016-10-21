@@ -1,7 +1,7 @@
 
 kk.page().onview(/\/[0-9]*/i,{
 
-	url : "version.html",
+	url : "version.htm",
 	container: "#kk-page",
 	onload : function(view,options) {
 
@@ -23,11 +23,11 @@ kk.page().onview(/\/[0-9]*/i,{
 				}
 
 				if(_fkey === undefined) {
-					return '<span style="color: ' + fcolor[bkey] + ';">';
+					return "<span style='color: " + fcolor[bkey] + ";'>";
 				}
 
-				return '<span style="background-color: ' + bcolor[bkey] + ';color: ' + fcolor[fkey] + ';">';
-				
+				return "<span style='background-color: " + bcolor[bkey] + ";color: " + fcolor[fkey] + ";'>";
+
 			});
 
 			var data = JSON.parse(text)
