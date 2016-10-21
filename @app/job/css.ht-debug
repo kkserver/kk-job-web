@@ -1,0 +1,38 @@
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+  	<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  	<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="/static/ui/fontello/css/fontello.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/fontello/css/animation.css">
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/static/ui/fontello/css/fontello-ie7.css"><![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="/static/lib/jquery-ui.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.icon.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.a.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.button.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.navbar.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.popover.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.table.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.progress.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.input.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.button.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.a.css" />
+
+	<link rel="stylesheet" type="text/css" href="/static/job/job.css">
+
+	<link rel="stylesheet" type="text/css" href="/static/kk/kk.css">
+
+
+	<script type="text/javascript" src="/static/lib/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="/static/lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/static/ui/ui.js"></script>
+	<script type="text/javascript" src="/static/ui/ui.date.js"></script>
+	<script type="text/javascript" src="/static/ui/ui.url.js"></script>
+
+	<script type="text/javascript" src="/static/kk/kk.js"></script>
+	<script type="text/javascript" src="/static/kk/kk.page.js"></script>
