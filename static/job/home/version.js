@@ -11,7 +11,26 @@ kk.page().onview(/\/[0-9]*/i,{
 			version = v
 		});
 
-		$.get("/job/api/version/log.json",{ jobId:ui.url.queryValue("id"),version:version,limit: 500},function(data){
+		var bcolor = {"40":"#000","41":"#f00","42":"#0f0","43":"#ff0","44":"#00f","45":"#f0f","46":"#0ff","47":"#fff"};
+		var fcolor = {"30":"#000","31":"#f00","32":"#0f0","33":"#ff0","34":"#00f","35":"#f0f","36":"#0ff","37":"#fff"};
+
+		$.get("/job/api/version/log.json",{ jobId:ui.url.queryValue("id"),version:version,limit: 500},function(text){
+
+			text = text.replace(/\033\[([0-9]*)(;([0-9]*))?m/g,function(text,bkey,_fkey,fkey){
+				
+				if(_fkey === undefined && bkey == 0) {
+					return "</span>"
+				}
+
+				if(_fkey === undefined) {
+					return '<span style="color: ' + fcolor[bkey] + ';">';
+				}
+
+				return '<span style="background-color: ' + bcolor[bkey] + ';color: ' + fcolor[fkey] + ';">';
+				
+			});
+
+			var data = JSON.parse(text)
 
 			if(data && data.logs) {
 				view.set("logs",data.logs);
@@ -20,7 +39,7 @@ kk.page().onview(/\/[0-9]*/i,{
 				view.set("logs",[]);
 			}
 
-		},"json");
+		},"text");
 
 		$.get("/job/api/version/get.json",{ jobId:ui.url.queryValue("id"),version:version},function(data){
 
