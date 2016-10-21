@@ -20,5 +20,5 @@
 </div>
 
 <div class="kk-job-log">
-	<pre class="kk-job-log-item kk-view" kk-each="logs">[{{ctime,ui.date.format,yyyy-MM-dd HH:mm:ss}}] [{{tag}}] {{log}}</pre>
+	<pre class="kk-job-log-item kk-view" kk-each="logs"><span>[{{ctime,ui.date.format,yyyy-MM-dd HH:mm:ss}}] [{{tag}}] </span><span kk-key="log"></span></pre>
 </div>
