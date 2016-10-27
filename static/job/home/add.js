@@ -57,7 +57,7 @@ kk.page().onview("/add",{
 				if( data && data.errmsg) {
 					alert(data.errmsg);
 				} else if (data && data.version) {
-					window.location = "?id=" + ui.url.queryValue("id") + "#/" + data.version.id;
+					window.location = "?id=" + ui.url.queryValue("id") + "#/" + data.version.version;
 				} else {
 					window.location = "?id=" + ui.url.queryValue("id") ;
 				}
