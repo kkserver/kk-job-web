@@ -4,7 +4,7 @@ local table = require("table")
 
 return function(page)
 
-	local data,_ = job.http("job/get",ngx.req.get_uri_args())
+	local data,_ = job.http("job/get",page.values)
 
 	if data and data.job then
 		
