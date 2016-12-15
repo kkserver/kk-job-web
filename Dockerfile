@@ -1,5 +1,7 @@
 FROM registry.cn-beijing.aliyuncs.com/kk/kk-micro:latest
 
+COPY ./api/job /api/job
+
 COPY ./web/job /web/job
 
 COPY ./lua/job /lib/lua/job
