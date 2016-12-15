@@ -1,6 +1,6 @@
 #/bin/sh
 
-#static compressor
+WORKDIR=`pwd`
 
 export DEBUG=1
 
@@ -20,6 +20,8 @@ runCommand() {
 if [ -d "$HOME/.kk-shell" ]; then
 	cd "$HOME/.kk-shell"
 	git pull origin master
+	chmod +x $HOME/.kk-shell/web/build.sh
+	chmod +x $HOME/.kk-shell/web/view.py
 	cd $WORKDIR
 else
 	git clone http://github.com/kkserver/kk-shell $HOME/.kk-shell
@@ -27,12 +29,14 @@ else
 	chmod +x $HOME/.kk-shell/web/view.py
 fi
 
+echo `pwd`
+
 CMD="$HOME/.kk-shell/web/build.sh"
 runCommand
 
 #docker
 CMD="docker build -t registry.cn-hangzhou.aliyuncs.com/kk/kk-job-web:debug ."
-#runCommand
+runCommand
 
-CMD="docker run -p 8080:80 registry.cn-hangzhou.aliyuncs.com/kk/kk-job-web:debug"
-#runCommand
+CMD="docker run -p 8080:80 --rm registry.cn-hangzhou.aliyuncs.com/kk/kk-job-web:debug"
+runCommand

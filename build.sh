@@ -24,6 +24,8 @@ buildProject() {
 	if [ -d "$HOME/.kk-shell" ]; then
 		cd "$HOME/.kk-shell"
 		git pull origin master "$HOME/.kk-shell"
+		chmod +x $HOME/.kk-shell/web/build.sh
+		chmod +x $HOME/.kk-shell/web/view.py
 		cd $WORKDIR
 	else
 		git clone http://github.com/kkserver/kk-shell $HOME/.kk-shell
