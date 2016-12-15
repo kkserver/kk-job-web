@@ -3,7 +3,7 @@
 end#}
 <html>
 	<head>
-		<title></title>
+		<title>{#page.job.title#}</title>
 		
 		
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -76,7 +76,6 @@ end#}
 			</div>
 		</div>
 		<script type="text/javascript">
-			page = {#kk.json.encode(page)#};
 			view = kk.view(document.body);
 		</script>
 	</body>

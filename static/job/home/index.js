@@ -21,6 +21,12 @@ Page.status = function(value) {
 
 $(function(){
 
+	$.post("/job/version/query.lua", { jobId:ui.url.queryValue("id"), limit: 200, maxVersion:-1},function(data){
+
+		view.set("versions",(data && data.versions) || []);
+
+	},"json");
+
 	view.set("versions",page.versions || []);
 
 	kk.page().onchange(/.*/i,function(){
