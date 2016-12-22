@@ -1,0 +1,10 @@
+
+In: 
+  logic: Request
+  Name: kk.job.job/version/log/pull
+  Options: =input
+  Done:
+    logic: Output
+    Keys: logs
+    Value: =result.logs
+      

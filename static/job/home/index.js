@@ -21,7 +21,7 @@ Page.status = function(value) {
 
 $(function(){
 
-	$.post("/job/version/query.lua", { jobId:ui.url.queryValue("id"), limit: 200, maxVersion:-1},function(data){
+	$.post("/job/api/version/query.json", { jobId:ui.url.queryValue("id"), limit: 200, maxVersion:-1},function(data){
 
 		view.set("versions",(data && data.versions) || []);
 

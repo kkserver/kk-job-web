@@ -14,7 +14,7 @@ kk.page().onview(/\/[0-9]*/i,{
 		var bcolor = {"40":"#000","41":"#f00","42":"#0f0","43":"#ff0","44":"#00f","45":"#f0f","46":"#0ff","47":"#fff"};
 		var fcolor = {"30":"#000","31":"#f00","32":"#0f0","33":"#ff0","34":"#00f","35":"#f0f","36":"#0ff","37":"#fff"};
 
-		$.get("/job/version/log.lua",{ jobId:ui.url.queryValue("id"),version:version,limit: 500},function(text){
+		$.get("/job/api/version/log.json",{ jobId:ui.url.queryValue("id"),version:version,limit: 500},function(text){
 
 			text = text.replace(/\033\[([0-9]*)(;([0-9]*))?m/g,function(text,bkey,_fkey,fkey){
 				
@@ -41,7 +41,7 @@ kk.page().onview(/\/[0-9]*/i,{
 
 		},"text");
 
-		$.get("/job/version/get.lua",{ jobId:ui.url.queryValue("id"),version:version},function(data){
+		$.get("/job/api/version/get.json",{ jobId:ui.url.queryValue("id"),version:version},function(data){
 
 			if(data && data.version) {
 

@@ -1,0 +1,14 @@
+
+In: 
+  logic: Request
+  Name: kk.job.job/version/create
+  Options: =input
+  Done:
+    logic: Output
+    Keys: job
+    Value: =result.job
+    Done: 
+      logic: Output
+      Keys: version
+      Value: =result.version
+      

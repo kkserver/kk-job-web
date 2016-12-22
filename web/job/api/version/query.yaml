@@ -1,0 +1,17 @@
+
+In: 
+  logic: Request
+  Name: kk.job.job/version/query
+  Options: =input
+  Done:
+    logic: Output
+    Keys: versions
+    Value: =result.versions
+    Fields:
+      - Name: title
+      - Name: jobId
+      - Name: version
+      - Name: status
+      - Name: ctime
+      - Name: id
+      

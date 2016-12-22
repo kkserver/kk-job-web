@@ -50,7 +50,7 @@ kk.page().onview("/add",{
 
 			var disabled = $("input[type=submit]",this).attr("disabled","disabled");
 
-			$.post("/job/version/add.lua", {jobId:ui.url.queryValue("id"),options:JSON.stringify(options),title: data.title },function(data){
+			$.post("/job/api/version/add.json", {jobId:ui.url.queryValue("id"),options:JSON.stringify(options),title: data.title },function(data){
 
 				disabled.removeAttr("disabled");
 

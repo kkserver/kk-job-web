@@ -38,5 +38,5 @@ runCommand
 CMD="docker build -t registry.cn-hangzhou.aliyuncs.com/kk/kk-job-web:debug ."
 runCommand
 
-CMD="docker run -p 8080:80 --rm registry.cn-hangzhou.aliyuncs.com/kk/kk-job-web:debug"
+CMD="docker run -p 8080:80 --rm -e KK_ENV_DEBUG=-debug registry.cn-hangzhou.aliyuncs.com/kk/kk-job-web:debug"
 runCommand

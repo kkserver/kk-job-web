@@ -1,11 +1,5 @@
-FROM registry.cn-beijing.aliyuncs.com/kk/kk-micro:latest
-
-COPY ./api/job /api/job
+FROM registry.cn-beijing.aliyuncs.com/kk/kk-logic:latest
 
 COPY ./web/job /web/job
-
-COPY ./lua/job /lib/lua/job
-
-COPY ./lua/conf/job.lua /lib/lua/conf/job.lua
-
 COPY ./static/job /static/job
+COPY ./config/env.ini /config/env.ini
