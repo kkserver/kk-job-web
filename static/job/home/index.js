@@ -27,8 +27,6 @@ $(function(){
 
 	},"json");
 
-	view.set("versions",page.versions || []);
-
 	kk.page().onchange(/.*/i,function(){
 
 		$("input.kk-job-version").each(function(){
