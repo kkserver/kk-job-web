@@ -2,7 +2,8 @@
 In: 
   logic: Request
   Name: kk.job.job/version/log/pull
-  Options: =input
+  Options: 
+    _: =input
   Done:
     logic: Output
     Keys: logs
