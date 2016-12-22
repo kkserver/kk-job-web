@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>kk-job</title>
+		
+		
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+  	<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  	<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="/static/ui/fontello/css/fontello.css" />
+	<link rel="stylesheet" type="text/css" href="/static/ui/fontello/css/animation.css">
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/static/ui/fontello/css/fontello-ie7.css"><![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="/static/lib/jquery-ui.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="/static/ui/ui.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="/static/job/job.css">
+
+	<link rel="stylesheet" type="text/css" href="/static/kk/kk.min.css">
+
+
+	<script type="text/javascript" src="/static/lib/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="/static/lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/static/ui/ui.min.js"></script>
+
+	<script type="text/javascript" src="/static/kk/kk.min.js"></script>
+
+
+		<script type="text/javascript" src="/static/job/home/index.js"></script>
+		<script type="text/javascript" src="/static/job/home/add.js"></script>
+		<script type="text/javascript" src="/static/job/home/version.js"></script>
+
+	</head>
+	<body class="ui-body ui-job">
+		<div class="ui-job-right">
+			<div class="ui-navbar"></div>
+			<div id="kk-page"></div>
+		</div>
+		<div class="ui-job-left">
+			<div class="ui-list">
+				<div kk-each="versions" class="ui-list-item kk-view">
+					<input type="hidden" name="hash" kk-key="version" class="kk-job-version" />
+					<div class="kk-item-content">
+						<div class="kk-title"><span class="kk-status" kk-key="status,Page.status"></span><span>#{{version}} {{title}}</span></div>
+						<div class="ui-progress" kk-key="status,kk.view.visible,1"><span kk-key="progress,Page.progress"></span></div>
+						<div class="kk-subtitle">{{ctime,ui.date.format,yyyy-MM-dd HH:mm:ss}}</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui-navbar">
+				<div class="ui-leftbar">
+					<span>{#page.job.title#}</span>
+				</div>
+				<div class="ui-rightbar">
+					<a class="ui-a" href="#/add">新建</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			view = kk.view(document.body);
+		</script>
+	</body>
+</html>
