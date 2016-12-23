@@ -7,8 +7,8 @@ kk.page().onview("/add",{
 
 		var options = [];
 
-		if(page && page.job && page.job.options){
-			var v = JSON.parse(page.job.options);
+		if(page && page.options){
+			var v = JSON.parse(page.options);
 			if(typeof v == "object") {
 				for(var key in v) {
 					var option = v[key];
@@ -34,8 +34,8 @@ kk.page().onview("/add",{
 				data[vs[i].name] = vs[i].value;
 			}
 
-			if(page && page.job && page.job.options){
-				var v = JSON.parse(page.job.options);
+			if(page && page.options){
+				var v = JSON.parse(page.options);
 				if(typeof v == "object") {
 					for(var key in v) {
 						var option = v[key];
