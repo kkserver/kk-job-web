@@ -1,0 +1,15 @@
+
+In: 
+  logic: Request
+  Name: kk.job.job/get
+  Options: 
+    id: =input.id
+  Done:
+    logic: Var
+    Keys: job
+    Value: =result.job
+    Done: Page
+  Fail: Page
+Page: 
+  logic: View
+  Path: ./view/job/home.html

@@ -1,8 +1,8 @@
 <html>
 	<head>
-		<title>kk-job</title>
+		<title>{#get("job","title")#}</title>
 		
-		<!-- #include(css.ht) -->
+		<!-- include(./view/job/css.html) -->
 
 		<script type="text/javascript" src="/static/job/home/index.js"></script>
 		<script type="text/javascript" src="/static/job/home/add.js"></script>
@@ -27,7 +27,7 @@
 			</div>
 			<div class="ui-navbar">
 				<div class="ui-leftbar">
-					<span>{#page.job.title#}</span>
+					<span>{#get("job","title")#}</span>
 				</div>
 				<div class="ui-rightbar">
 					<a class="ui-a" href="#/add">新建</a>

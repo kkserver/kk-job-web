@@ -1,11 +1,11 @@
 
 In: 
   logic: Request
-  Name: kk.job.job/version/query
+  Name: kk.job.job/get
   Options: 
     _: =input
   Done:
     logic: Output
-    Keys: versions
-    Value: =result.versions
+    Keys: job
+    Value: =result.job
       
