@@ -16,7 +16,7 @@ kk.page().onview(/\/[0-9]*/i,{
 
 		$.get("/job/api/version/log.json",{ jobId:ui.url.queryValue("id"),version:version,limit: 500},function(text){
 
-			text = text.replace(/\033\[([0-9]*)(;([0-9]*))?m/g,function(text,bkey,_fkey,fkey){
+			text = text.replace(/\\u001b\[([0-9]*)(;([0-9]*))?m/g,function(text,bkey,_fkey,fkey){
 				
 				if(_fkey === undefined && bkey == 0) {
 					return "</span>"
