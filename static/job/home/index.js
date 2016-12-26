@@ -25,6 +25,17 @@ $(function(){
 
 		view.set("versions",(data && data.versions) || []);
 
+		$("input.kk-job-version").each(function(){
+
+			if("#/" + this.value == window.location.hash) {
+				$(this.parentNode).addClass("ui-selected");
+			}
+			else {
+				$(this.parentNode).removeClass("ui-selected");
+			}
+
+		});
+		
 	},"json");
 
 	kk.page().onchange(/.*/i,function(){
