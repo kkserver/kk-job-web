@@ -48,8 +48,8 @@ kk.page().onview(/\/[0-9]*/i,{
 				var options = [];
 				var optionsMap = {};
 
-				if(page && page.job && page.job.options){
-					var v = JSON.parse(page.job.options);
+				if(page && page.options){
+					var v = JSON.parse(page.options);
 					if(typeof v == "object") {
 						for(var key in v) {
 							var option = v[key];
